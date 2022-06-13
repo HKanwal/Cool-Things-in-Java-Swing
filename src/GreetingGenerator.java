@@ -39,7 +39,7 @@ public class GreetingGenerator extends JFrame {
         setLayout(null);
         setVisible(true);
         setResizable(false);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     private class InpKeyListener implements KeyListener {

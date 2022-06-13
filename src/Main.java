@@ -3,7 +3,7 @@ import com.formdev.flatlaf.FlatDarkLaf;
 public class Main {
     public static void main(String[] args) {
         FlatDarkLaf.setup();
-        new GreetingGenerator();
+        new LandingPage();
     }
 
     private static int binSearch(int[] array, int target) {
