@@ -20,9 +20,12 @@ public class LandingPage extends JFrame {
         JMenu menu = new JMenu("Apps");
         JMenuItem greetingGenerator = new JMenuItem("Greeting Generator");
         greetingGenerator.addActionListener(new GreetingGeneratorListener());
+        JMenuItem pinger = new JMenuItem("Pinger");
+        pinger.addActionListener(new PingerListener());
         JMenuBar menuBar = new JMenuBar();
 
         menu.add(greetingGenerator);
+        menu.add(pinger);
         menuBar.add(menu);
 
         setJMenuBar(menuBar);
@@ -43,6 +46,15 @@ public class LandingPage extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             new GreetingGenerator();
+        }
+    }
+
+    private class PingerListener implements ActionListener {
+        PingerListener() {}
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new Pinger();
         }
     }
 }
