@@ -13,6 +13,7 @@ public class LandingPage extends JFrame {
     public LandingPage() {
         apps.put("Greeting Generator", new GreetingGenerator());
         apps.put("Pinger", new Pinger());
+        apps.put("Key Code Identifier", new KeyCodeIdentifier());
 
         JLabel title = new JLabel("Cool Things in Java Swing");
         title.setBounds(0, 40, width, 30);
