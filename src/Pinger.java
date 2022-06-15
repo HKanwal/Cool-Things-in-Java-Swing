@@ -4,13 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Pinger extends JFrame {
+public class Pinger extends App {
     private final int width = 500;
     private final int height = 250;
     JButton submit;
@@ -45,7 +43,6 @@ public class Pinger extends JFrame {
         add(output);
         setLayout(null);
         setResizable(false);
-        setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 

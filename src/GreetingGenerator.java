@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class GreetingGenerator extends JFrame {
+public class GreetingGenerator extends App {
     private JLabel outLabel;
     private JButton button;
 
@@ -37,7 +37,6 @@ public class GreetingGenerator extends JFrame {
         add(button);
         add(outLabel);
         setLayout(null);
-        setVisible(true);
         setResizable(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
