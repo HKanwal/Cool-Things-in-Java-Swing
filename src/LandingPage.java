@@ -1,20 +1,13 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.HashMap;
 
 public class LandingPage extends JFrame {
     private final int width = 500;
     private final int height = 200;
-    private HashMap<String, App> apps = new HashMap<>();
+    private App[] apps = { new GreetingGenerator(), new Pinger(), new KeyCodeIdentifier() };
 
     public LandingPage() {
-        apps.put("Greeting Generator", new GreetingGenerator());
-        apps.put("Pinger", new Pinger());
-        apps.put("Key Code Identifier", new KeyCodeIdentifier());
-
         JLabel title = new JLabel("Cool Things in Java Swing");
         title.setBounds(0, 40, width, 30);
         title.setHorizontalAlignment(SwingConstants.CENTER);
@@ -24,8 +17,9 @@ public class LandingPage extends JFrame {
         subtitle.setHorizontalAlignment(SwingConstants.CENTER);
 
         JMenu menu = new JMenu("Apps");
-        apps.forEach((name, app) -> {
-            JMenuItem menuItem = new JMenuItem(name);
+        for (int i = 0; i < apps.length; i++) {
+            App app = apps[i];
+            JMenuItem menuItem = new JMenuItem(app.getTitle());
             menuItem.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -33,7 +27,7 @@ public class LandingPage extends JFrame {
                 }
             });
             menu.add(menuItem);
-        });
+        }
 
         JMenuBar menuBar = new JMenuBar();
         menuBar.add(menu);

@@ -80,13 +80,9 @@ public class Pinger extends App {
         }
 
         @Override
-        public void keyReleased(KeyEvent e) {
-            return;
-        }
+        public void keyReleased(KeyEvent e) {}
 
         @Override
-        public void keyTyped(KeyEvent e) {
-            return;
-        }
+        public void keyTyped(KeyEvent e) {}
     }
 }
